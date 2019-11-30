@@ -1,13 +1,15 @@
 import React from 'react';
 
 class Search extends React.Component {
-    state = {term: ''};
+    state = { term: '' };
 
-    onFormSubmit(event) {
+    onFormSubmit = (event) => {
         event.preventDefault();
+
+        this.props.onSubmit(this.state.term)
     }
 
-    render() {
+        render() {
         return (
             <div className="ui segment">
                 <form className="ui form" onSubmit={this.onFormSubmit}>
