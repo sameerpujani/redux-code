@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-// import { fetchPosts } from "../actions";
+import postsReducer from "./postsReducer";
 
 export default combineReducers({
-    replaceMe: 'Hi there!'
+    posts: postsReducer
 });
